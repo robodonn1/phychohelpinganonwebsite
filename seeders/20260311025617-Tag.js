@@ -1,0 +1,72 @@
+'use strict';
+
+/** @type {import('sequelize-cli').Migration} */
+module.exports = {
+    async up(queryInterface, Sequelize) {
+        await queryInterface.bulkInsert('Tag', [
+            { name: 'Подавленность', slug: 'depressed-mood' },
+            { name: 'Грусть', slug: 'sadness' },
+            { name: 'Апатия', slug: 'apathy' },
+            { name: 'Тревога', slug: 'anxiety' },
+            { name: 'Беспокойство', slug: 'restlessness' },
+            { name: 'Раздражительность', slug: 'irritability' },
+            { name: 'Вспышки гнева', slug: 'anger-outbursts' },
+            { name: 'Перепады настроения', slug: 'mood-swings' },
+            { name: 'Чувство вины и стыда', slug: 'guilt-and-shame' },
+            { name: 'Одиночество', slug: 'loneliness' },
+            { name: 'Пустота', slug: 'emptiness' },
+            { name: 'Фобия', slug: 'phobia' },
+            { name: 'Социальная тревога', slug: 'social-anxiety' },
+            { name: 'Панические атаки', slug: 'panic-attacks' },
+            { name: 'Навязчивые мысли', slug: 'obsessive-thoughts' },
+            { name: 'Страх заболеть', slug: 'fear-of-illness' },
+            { name: 'Семейный конфликт', slug: 'family-conflict' },
+            { name: 'Трудность в общении', slug: 'communication-difficulties' },
+            { name: 'Созависимость', slug: 'codependency' },
+            { name: 'Трудности в поведении ребенка', slug: 'child-behavior-problems' },
+            { name: 'Проблемы с учебой', slug: 'learning-problems' },
+            { name: 'Проблемы с мотивацией', slug: 'motivation-issues' },
+            { name: 'Адаптация к детскому учреждению', slug: 'school-adjustment' },
+            { name: 'Подростковый возраст', slug: 'adolescence' },
+            { name: 'СДВГ', slug: 'adhd' },
+            { name: 'ЗПР', slug: 'developmental-delay' },
+            { name: 'РАС', slug: 'asd' },
+            { name: 'Низкая самооценка', slug: 'low-self-esteem' },
+            { name: 'Неуверенность в себе', slug: 'self-doubt' },
+            { name: 'Сложности с принятием решений', slug: 'decision-making-difficulties' },
+            { name: 'Прокрастинация', slug: 'procrastination' },
+            { name: 'Лень', slug: 'laziness' },
+            { name: 'Переживание личностного кризиса', slug: 'identity-crisis' },
+            { name: 'Проблемы с идентичностью', slug: 'identity-issues' },
+            { name: 'Острое горе', slug: 'acute-grief' },
+            { name: 'Утрата', slug: 'loss' },
+            { name: 'ПТСР', slug: 'ptsd' },
+            { name: 'Психологическое насилие', slug: 'psychological-abuse' },
+            { name: 'Алкогольная зависимость', slug: 'alcohol-addiction' },
+            { name: 'Наркотическая зависимость', slug: 'drug-addiction' },
+            { name: 'Токсическая зависимость', slug: 'inhalant-abuse' },
+            { name: 'Игровая зависимость', slug: 'gambling-addiction' },
+            { name: 'Интернет-зависимость', slug: 'internet-addiction' },
+            { name: 'Пищевая зависимость', slug: 'food-addiction' },
+            { name: 'Нервная анорексия', slug: 'anorexia-nervosa' },
+            { name: 'Нервная булимия', slug: 'bulimia-nervosa' },
+            { name: 'Компульсивное переедание', slug: 'binge-eating-disorder' },
+            { name: 'Непринятие своего тела', slug: 'body-image-issues' },
+            { name: 'Психосоматика', slug: 'psychosomatics' },
+            { name: 'Депрессивные эпизоды', slug: 'depressive-episodes' },
+            { name: 'Биполярное аффективное расстройство', slug: 'bipolar-disorder' },
+            { name: 'Шизофрения', slug: 'schizophrenia' },
+            { name: 'Расстройства личности', slug: 'personality-disorders' },
+            { name: 'Органические поражения головного мозга', slug: 'organic-brain-damage' },
+            { name: 'Профессиональное выгорание', slug: 'burnout' },
+            { name: 'Потеря работы', slug: 'job-loss' },
+            { name: 'Безработица', slug: 'unemployment' },
+            { name: 'Конфликты на работе', slug: 'work-conflicts' },
+            { name: 'Неудовлетворенность профессией', slug: 'job-dissatisfaction' }
+        ], {});
+    },
+
+    async down(queryInterface, Sequelize) {
+        await queryInterface.bulkDelete('Tag', null, {});
+    }
+};
