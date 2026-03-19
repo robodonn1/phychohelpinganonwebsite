@@ -25,7 +25,7 @@ app.use(rateLimit({
 }));
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://psycheapost.vercel.app',
     credentials: true,
 }));
 app.use(cookieParser());
